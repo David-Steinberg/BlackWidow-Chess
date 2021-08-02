@@ -34,7 +34,7 @@
                includeAntRuntime="no"
                failonerror="true"
                classpath="xyz.jar"
-               excludes="tests/**/*.java">
+               excludes="">
             <classpath refid="master-classpath"/>
         </javac>
     </target>

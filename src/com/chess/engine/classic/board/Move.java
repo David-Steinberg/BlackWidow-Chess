@@ -11,6 +11,7 @@ public abstract class Move {
     protected final int destinationCoordinate;
     protected final Piece movedPiece;
     protected final boolean isFirstMove;
+    private int score;
 
     private Move(final Board board,
                  final Piece pieceMoved,
@@ -108,7 +109,15 @@ public abstract class Move {
         return "";
     }
 
-    public enum MoveStatus {
+    public int getScore() {
+		return score;
+	}
+
+	public void setScore(int score) {
+		this.score = score;
+	}
+
+	public enum MoveStatus {
 
         DONE {
             @Override
